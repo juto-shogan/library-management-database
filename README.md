@@ -1,30 +1,79 @@
-# library-management-database
-A basic database layout for a **Library Management System**.
+# SQL Project: Database Schema Creation, Seeding & Data Manipulation
 
-## Database and Tools
+## Overview
 
-- Postgresql
-- pgAdmin4
+This project demonstrates fundamental SQL database operations, including schema creation, data seeding (insertion), and various forms of data manipulation. It is designed to help learners and developers understand the essential workflow of building and working with a relational database using SQL.
 
-## Features
+The SQL files are structured into three main phases:
 
-- Tables for Books, Authors, Members, Loans and more.
-- Implemented one-to-many relationships (e.g., one author can have many books).
-- Implemented many-to-many relationships (e.g., a member can loan many books, a book can be loaned by many members over time).
+1. **Schema Creation** – Defining tables, relationships, and constraints.
+2. **Data Seeding** – Populating the database with sample data.
+3. **Data Manipulation** – Performing CRUD operations and executing queries.
 
-## PostgreSQL concepts demonstrated.
-- Table creation with various data types
-- Primary and foreign keys
-- JOIN operations
-- INSERT
-- UPDATE
-- DELETE statements
-- WHERE clauses
-- GROUP BY
-- ORDER BY
+## Project Structure
 
-## Important notes
+| File Name               | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| `1_schema_creation.sql`  | Creates the database schema, including tables, data types, keys, and constraints. |
+| `2_data_seeding.sql`     | Inserts sample records into the created tables for testing and demonstration.    |
+| `3_data_manipulation.sql`| Demonstrates operations such as `SELECT`, `UPDATE`, `DELETE`, `JOIN`, and more.  |
 
-- The **2_data_seeding.sql** is just a dummy dataset, and it isn't a real 
-- Scripts are numbered in the order you should run them
-- Feel free to contribute, I'm looking forward to your PRs
+## Requirements
+
+- Database Engine: PostgreSQL (preferred) or any SQL-compatible RDBMS
+- SQL Client: pgAdmin, DBeaver, DataGrip, or terminal-based `psql`
+
+## Usage
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+
+2. **Create a Database**
+
+   ```sql
+   CREATE DATABASE your_database_name;
+   ```
+
+3. **Run SQL Scripts in Order**
+
+   * Execute the schema creation file:
+
+     ```bash
+     psql -d your_database_name -f 1_schema_creation.sql
+     ```
+
+   * Insert sample data:
+
+     ```bash
+     psql -d your_database_name -f 2_data_seeding.sql
+     ```
+
+   * Run manipulation queries:
+
+     ```bash
+     psql -d your_database_name -f 3_data_manipulation.sql
+     ```
+
+## Key Features
+
+* Normalised relational database schema
+* Enforced data integrity with primary and foreign keys
+* Sample dataset for testing and learning
+* Advanced SQL queries including joins and aggregations
+
+## Learning Objectives
+
+* Understand how to design a relational database schema
+* Learn to insert and manage data using SQL
+* Practice writing SQL queries for real-world scenarios
+* Gain experience with JOINs, GROUP BY, subqueries, and data updates
+
+## Author
+
+**Somto Mbonu**
+Aspiring Penetration Tester & Machine Learning Engineer
+[GitHub Profile](https://github.com/juto-shogan)
+
